@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Primera Comunión de Ximena Nahomi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#E9F0DA;--paper:#F8FBEE;--olive:#56672A;--gold:#C0922F;--ink:#3E4A1E;--line:#D7C58F;
+--script:'Kaushan Script','Brush Script MT',cursive;--serif:'Fraunces',Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#E9F0DA;--paper:#F8FBEE;--olive:#56672A;--gold:#C0922F;--ink:#3E4A1E;--line:#D7C58F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141B0D;--paper:#222C16;--olive:#CBD99B;--gold:#E3B95A;--ink:#E8EED0;--line:#6B5A2A;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);overflow:hidden;display:flex;justify-content:center}
+.stage{position:relative;width:100%;max-width:480px;height:100%;overflow:hidden}
+.slide{position:absolute;inset:0 0 64px;padding:18px 18px 8px;display:flex;opacity:0;pointer-events:none;transform:translateX(40px);transition:opacity .6s,transform .6s}
+.slide.on{opacity:1;pointer-events:auto;transform:none}
+.slide.past{transform:translateX(-40px)}
+.arch{position:relative;flex:1;background:var(--paper);border-radius:999px 999px 28px 28px/ 260px 260px 28px 28px;border:1px solid var(--line);outline:1px solid var(--line);outline-offset:-9px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 28px 32px;gap:14px;overflow:hidden}
+.arch>*{position:relative;z-index:1}
+.sprig{position:absolute;width:150px;opacity:.9;z-index:0;color:var(--olive)}
+.s1{left:-34px;bottom:-14px}.s2{right:-34px;top:60px;transform:scaleX(-1) rotate(-20deg)}
+h1{font:400 clamp(2.6rem,12vw,3.6rem)/1 var(--script);color:var(--gold)}
+h2{font:400 clamp(1.9rem,8vw,2.4rem)/1.1 var(--script);color:var(--gold)}
+.name{font-weight:600;font-size:1.65rem;letter-spacing:.02em;color:var(--olive)}
+.quote{font-size:1.35rem;line-height:1.5;color:var(--olive)}
+.big{font:600 5rem/1 var(--serif);color:var(--olive)}
+.mes{font-size:2rem;color:var(--olive)}
+.row{display:flex;align-items:center;gap:12px;font-size:1.35rem;color:var(--olive)}
+.row i{display:block;width:34px;height:1px;background:var(--gold)}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:100%;max-width:300px}
+.cd div{border:1px solid var(--line);border-radius:14px;padding:8px 2px}
+.cd b{display:block;font-size:1.5rem;color:var(--olive)}.cd span{font-size:.75rem}
+.addr{font-size:1.2rem;line-height:1.5;color:var(--olive)}
+.btn{font:600 1rem var(--serif);background:var(--olive);color:var(--paper);border:0;border-radius:999px;padding:13px 26px;cursor:pointer;text-decoration:none;display:inline-block;transition:transform .2s}
+.btn:active{transform:scale(.96)}
+.btn.o{background:none;color:var(--olive);border:1px solid var(--olive)}
+input{font:inherit;width:100%;max-width:280px;padding:11px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);text-align:center}
+.step{display:flex;align-items:center;gap:14px}
+.step button{width:38px;height:38px;border-radius:50%;border:1px solid var(--olive);background:none;color:var(--olive);font-size:1.3rem;cursor:pointer}
+.step output{min-width:110px;font-size:1.05rem}
+.nav{position:absolute;left:0;right:0;bottom:0;height:64px;display:flex;align-items:center;justify-content:center;gap:18px}
+.nav button.ar{width:42px;height:42px;border-radius:50%;border:1px solid var(--olive);background:var(--paper);color:var(--olive);font-size:1.2rem;cursor:pointer}
+.nav button:disabled{opacity:.3;cursor:default}
+.dots{display:flex;gap:9px}.dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
+.dots button.on{background:var(--gold);transform:scale(1.4)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.ray{stroke:var(--gold);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw .9s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.dove{animation:fly 1.4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes fly{from{opacity:0;transform:translateY(40px) scale(.7)}}
+.spark{position:fixed;width:8px;height:8px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:9}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.ray{stroke-dashoffset:0}}
+@media (max-height:700px){.arch{padding-top:48px;gap:9px}.big{font-size:3.6rem}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="sp" viewBox="0 0 150 200"><g fill="currentColor"><path d="M75 200C70 130 80 60 100 5" stroke="currentColor" stroke-width="3" fill="none"/>
+<path d="M76 170c-30-6-48-30-50-50 28 4 46 24 50 50zM74 130c-26-10-38-34-36-54 26 8 38 30 36 54zM76 92c-20-12-28-34-22-52 22 10 28 30 22 52zM84 60c16-10 22-28 18-44-18 8-22 26-18 44zM80 150c26-4 42-24 44-44-26 2-42 22-44 44zM80 112c20-6 32-22 32-40-20 2-32 18-32 40z"/></g>
+<g fill="#fff" stroke="#E2B94F"><circle cx="40" cy="190" r="11"/><circle cx="40" cy="190" r="4" fill="#E2B94F"/></g></symbol></defs></svg>
+
+<main class="stage" id="stage">
+
+<section class="slide on" aria-label="Portada"><div class="arch">
+<svg class="sprig s1" aria-hidden="true"><use href="#sp"/></svg><svg class="sprig s2" aria-hidden="true"><use href="#sp"/></svg>
+<svg viewBox="0 0 260 130" width="230" aria-hidden="true" style="margin-top:-18px">
+<g fill="none"><path class="ray" pathLength="1" d="M20 70l32 8"/><path class="ray" pathLength="1" d="M28 40l30 14"/><path class="ray" pathLength="1" d="M60 14l18 22"/><path class="ray" pathLength="1" d="M240 70l-32 8"/><path class="ray" pathLength="1" d="M232 40l-30 14"/><path class="ray" pathLength="1" d="M200 14l-18 22"/></g>
+<g class="dove" fill="#E8D9D3"><path d="M130 62C108 28 70 18 44 38c26 0 42 14 56 36z"/><path d="M130 62c22-34 60-44 86-24-26 0-42 14-56 36z"/><path d="M100 74c10 36 50 36 60 0-10-12-18-16-30-12-12-4-20 0-30 12z"/><circle cx="130" cy="58" r="9"/><path d="M130 62l-3 8 6 0z" fill="#E0A04A"/><path d="M122 100l8 22 8-22z"/></g></svg>
+<h1>Mi Primera Comunión</h1>
+<p class="name">Ximena Nahomi</p>
+<button class="btn" data-go="1">Abrir invitación</button>
+</div></section>
+
+<section class="slide" aria-label="Mensaje"><div class="arch">
+<svg class="sprig s1" aria-hidden="true"><use href="#sp"/></svg>
+<h2>Un mensaje especial</h2>
+<p class="quote">“Que este encuentro con Jesús sea para mí fuente de luz en el camino de la vida.”</p>
+<p class="name" style="font-size:1.2rem">Ximena Nahomi</p>
+</div></section>
+
+<section class="slide" aria-label="Fecha"><div class="arch">
+<div class="row"><span>Domingo</span><i></i><span>2:00 p.m.</span></div>
+<div class="big">20</div><div class="mes">Diciembre</div>
+<div class="cd" id="cd" aria-live="off"><div><b>0</b><span>días</span></div><div><b>0</b><span>horas</span></div><div><b>0</b><span>min</span></div><div><b>0</b><span>seg</span></div></div>
+<a class="btn o" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Primera%20Comuni%C3%B3n%20de%20Ximena%20Nahomi&dates=20261220T140000/20261220T180000&ctz=America/Mexico_City&location=Manzana%20001%2C%20Esmeralda%2C%20Col.%20La%20Joya%2C%2054972%2C%20El%20Progreso%2C%20M%C3%A9x.">Agregar al calendario</a>
+</div></section>
+
+<section class="slide" aria-label="Lugar"><div class="arch">
+<svg class="sprig s2" aria-hidden="true"><use href="#sp"/></svg>
+<h2>Dónde será</h2>
+<p class="addr">Manzana 001, Esmeralda<br>Col. La Joya, C.P. 54972<br>El Progreso, Méx.</p>
+<a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/nT9TzE3HFb5PuKHr7">Cómo llegar</a>
+</div></section>
+
+<section class="slide" aria-label="Confirmar asistencia"><div class="arch" style="padding-top:78px">
+<svg class="sprig s1" aria-hidden="true"><use href="#sp"/></svg>
+<h2>Confirma tu asistencia</h2>
+<input id="nom" placeholder="Tu nombre" aria-label="Tu nombre" autocomplete="name">
+<div class="step"><button id="m" aria-label="Menos">−</button><output id="n">1 persona</output><button id="p" aria-label="Más">+</button></div>
+<button class="btn" id="ok">Confirmar por WhatsApp</button>
+<h2 style="margin-top:6px">¡Te esperamos!</h2>
+</div></section>
+
+<nav class="nav"><button class="ar" id="pv" aria-label="Anterior">‹</button><div class="dots" id="dots"></div><button class="ar" id="nx" aria-label="Siguiente">›</button></nav>
+</main>
+
+<script>
+(function(){
+var S=[].slice.call(document.querySelectorAll('.slide')),i=0,D=document.getElementById('dots'),pv=document.getElementById('pv'),nx=document.getElementById('nx');
+S.forEach(function(s,k){var b=document.createElement('button');b.setAttribute('aria-label','Página '+(k+1));b.onclick=function(){go(k)};D.appendChild(b)});
+function go(k){if(k<0||k>=S.length)return;i=k;S.forEach(function(s,j){s.classList.toggle('on',j===k);s.classList.toggle('past',j<k)});
+[].forEach.call(D.children,function(b,j){b.classList.toggle('on',j===k)});pv.disabled=k===0;nx.disabled=k===S.length-1}
+pv.onclick=function(){go(i-1)};nx.onclick=function(){go(i+1)};
+document.querySelectorAll('[data-go]').forEach(function(b){b.onclick=function(){go(+b.dataset.go)}});
+document.addEventListener('keydown',function(e){if(/INPUT/.test(e.target.tagName))return;if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1)});
+var x0=null;document.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+document.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)go(i+(d<0?1:-1));x0=null});
+go(0);
+var T=new Date(2026,11,20,14,0,0),cd=document.getElementById('cd').querySelectorAll('b');
+function tick(){var t=Math.max(0,T-new Date())/1000;var v=[Math.floor(t/86400),Math.floor(t%86400/3600),Math.floor(t%3600/60),Math.floor(t%60)];v.forEach(function(n,k){cd[k].textContent=n})}
+tick();setInterval(tick,1000);
+var g=1,n=document.getElementById('n');
+function up(){n.textContent=g+(g===1?' persona':' personas')}
+document.getElementById('m').onclick=function(){if(g>1){g--;up()}};
+document.getElementById('p').onclick=function(){if(g<12){g++;up()}};
+document.getElementById('ok').onclick=function(e){
+var r=e.target.getBoundingClientRect();
+if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){for(var k=0;k<22;k++){var s=document.createElement('span');s.className='spark';s.style.left=(r.left+r.width/2)+'px';s.style.top=(r.top+r.height/2)+'px';document.body.appendChild(s);
+var a=Math.random()*6.28,d=60+Math.random()*90;s.animate([{transform:'translate(0,0) scale(1)',opacity:1},{transform:'translate('+Math.cos(a)*d+'px,'+(Math.sin(a)*d+30)+'px) scale(0)',opacity:0}],{duration:900+Math.random()*500,easing:'ease-out'}).onfinish=(function(el){return function(){el.remove()}})(s)}}
+var nm=document.getElementById('nom').value.trim()||'Un invitado';
+var msg='¡Hola! Soy '+nm+' y confirmo mi asistencia a la Primera Comunión de Ximena Nahomi el domingo 20 de diciembre. Asistiremos '+g+(g===1?' persona.':' personas.');
+setTimeout(function(){window.open('https://wa.me/525519130559?text='+encodeURIComponent(msg),'_blank','noopener')},700)};
+})();
+</script>
+</body>
+</html>
